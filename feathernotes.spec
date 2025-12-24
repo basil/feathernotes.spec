@@ -12,6 +12,7 @@ Source0:        %{url}/archive/V%{version}.tar.gz#/%{github_name}-%{version}.tar
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
 BuildRequires:  gcc-c++
+BuildRequires:  libappstream-glib
 BuildRequires:  cmake(Qt6Core)
 BuildRequires:  cmake(Qt6Gui)
 BuildRequires:  cmake(Qt6Widgets)
@@ -58,6 +59,7 @@ independent of any desktop environment and has:
 
 %check
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
+appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 
 %files -f %{name}.lang
 %license COPYING
