@@ -70,9 +70,9 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
 %{_datadir}/icons/hicolor/scalable/mimetypes/text-%{name}-fnx.svg
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/translations
-%{_datadir}/metainfo/%{name}.metainfo.xml
+%{_metainfodir}/%{name}.metainfo.xml
 %{_datadir}/mime/packages/%{name}.xml
 
 %changelog
 * Tue Dec 23 2025 Basil Crow <me@basilcrow.com> - 1.3.2-1
-- Initial COPR packaging
+- Initial packaging
