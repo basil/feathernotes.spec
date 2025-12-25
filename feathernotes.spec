@@ -59,12 +59,12 @@ independent of any desktop environment and has:
 
 %check
 desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
-appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/*.metainfo.xml
+appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/%{name}.metainfo.xml
 
 %files -f %{name}.lang
 %license COPYING
 %doc ChangeLog INSTALL NEWS README.md
-%{_bindir}/*
+%{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
 %{_datadir}/icons/hicolor/scalable/mimetypes/text-%{name}-fnx.svg
