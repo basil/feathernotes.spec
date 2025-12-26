@@ -7,7 +7,7 @@ Summary:        Lightweight Qt notes manager
 
 License:        GPL-3.0-or-later
 URL:            https://github.com/tsujan/%{github_name}
-Source0:        %{url}/archive/V%{version}.tar.gz#/%{github_name}-%{version}.tar.xz
+Source0:        %{url}/archive/V%{version}/%{github_name}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  desktop-file-utils
