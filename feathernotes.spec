@@ -5,7 +5,7 @@ Version:        1.3.2
 Release:        1%{?dist}
 Summary:        Lightweight Qt notes manager
 
-License:        GPL-3.0-or-later
+License:        GPL-3.0-or-later AND BSD-3-Clause
 URL:            https://github.com/tsujan/%{github_name}
 Source0:        %{url}/archive/V%{version}/%{github_name}-%{version}.tar.gz
 
@@ -54,6 +54,10 @@ It is independent of any desktop environment and has:
 %prep
 %autosetup -n %{github_name}-%{version} -p 1
 
+# Extract the BSD-3-Clause license used by SimpleCrypt so it can be
+# installed via %%license
+sed -n '1,/^\*\/$/p' feathernotes/simplecrypt.h >COPYING.simplecrypt
+
 %build
 %cmake
 %cmake_build
@@ -67,7 +71,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/%{name}.metainfo.xml
 
 %files -f %{name}.lang
-%license COPYING
+%license COPYING COPYING.simplecrypt
 %doc ChangeLog INSTALL NEWS README.md
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
