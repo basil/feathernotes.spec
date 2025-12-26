@@ -25,6 +25,7 @@ BuildRequires:  pkgconfig(hunspell) >= 1.6
 BuildRequires:  pkgconfig(xext)
 
 Requires:       hicolor-icon-theme
+Requires:       shared-mime-info
 
 %description
 FeatherNotes is a lightweight Qt hierarchical notes manager for Linux.
