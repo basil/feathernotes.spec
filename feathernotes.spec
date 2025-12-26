@@ -27,11 +27,13 @@ BuildRequires:  pkgconfig(xext)
 Requires:       hicolor-icon-theme
 
 %description
-FeatherNotes is a lightweight Qt hierarchical notes manager for Linux. It is
-independent of any desktop environment and has:
+FeatherNotes is a lightweight Qt hierarchical notes manager for Linux.
+It is independent of any desktop environment and has:
 
-* Support for rich text formatting, image embedding and inserting editable tables;
-* Drag-and-drop capability for moving nodes and also for embedding images;
+* Support for rich text formatting, image embedding and inserting
+  editable tables;
+* Drag-and-drop capability for moving nodes and also for embedding
+  images;
 * A tray icon for quick access on any desktop;
 * Saving and restoring of size (and also position under X11);
 * Compact but complete search and replacement widgets;
@@ -42,9 +44,11 @@ independent of any desktop environment and has:
 * Printing and exporting to HTML and PDF;
 * Password protection;
 * Auto-saving;
-* Optional spell checking with Hunspell (if enabled at compilation time);
+* Optional spell checking with Hunspell (if enabled at compilation
+  time);
 * macOS support; and
-* Other features that can be found in its settings, on its menus or when it is actually used.
+* Other features that can be found in its settings, on its menus or when
+  it is actually used.
 
 %prep
 %autosetup -n %{github_name}-%{version} -p 1
